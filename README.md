@@ -22,17 +22,16 @@ cd backend
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r ../requirements.txt
-alembic upgrade head     # Run database migrations
 uvicorn app.main:app --reload
 
 # Frontend: Install and run (in a new terminal)
 cd ../frontend
 npm install
-npm start
+npm run dev
 ```
 
 Visit:
-- 🌐 Frontend: http://localhost:3000
+- 🌐 Frontend: http://localhost:5173
 - 📚 API Docs: http://localhost:8000/docs
 - 💻 API: http://localhost:8000
 
@@ -418,7 +417,6 @@ const { team, members, inviteMember } = useTeam();
    python -m venv venv
    source venv/bin/activate  # On Windows use: venv\Scripts\activate
    pip install -r ../requirements.txt
-   alembic upgrade head
    uvicorn app.main:app --reload
    ```
 
@@ -426,7 +424,7 @@ const { team, members, inviteMember } = useTeam();
    ```bash
    cd frontend
    npm install
-   npm start
+   npm run dev
    ```
 
 ## 🔐 Contributing

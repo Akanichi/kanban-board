@@ -37,10 +37,6 @@ Visit:
 - 📚 API Docs: http://localhost:8000/docs
 - 💻 API: http://localhost:8000
 
-Default Admin Account:
-- Email: admin@example.com
-- Password: admin123
-
 ## 🚀 Table of Contents
 - [Features](#-features)
 - [Tech Stack](#️-tech-stack)

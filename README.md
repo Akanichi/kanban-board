@@ -39,21 +39,6 @@ Default Admin Account:
 - Email: admin@example.com
 - Password: admin123
 
-Required Environment Variables:
-```env
-# Backend (.env)
-DEBUG=True
-ENVIRONMENT=development
-SECRET_KEY=your-secret-key-here
-DATABASE_URL=sqlite:///./kanban.db
-CORS_ORIGINS=["http://localhost:3000"]
-
-# Frontend (.env)
-VITE_API_URL=http://localhost:8000/api
-VITE_WS_URL=ws://localhost:8000/ws
-VITE_ENVIRONMENT=development
-```
-
 ## 🚀 Table of Contents
 - [Features](#-features)
 - [Tech Stack](#️-tech-stack)
@@ -117,7 +102,7 @@ VITE_ENVIRONMENT=development
   - Uvicorn ASGI server
   
 - **Database**:
-  - SQLAlchemy ORM
+- SQLAlchemy ORM
   - SQLite (development)
   - PostgreSQL (production)
   - Alembic for migrations

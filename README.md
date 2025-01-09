@@ -21,7 +21,7 @@ cd kanban-board
 cd backend
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+pip install -r ../requirements.txt  # Install from root requirements.txt
 cp .env.example .env     # Create and configure your .env file
 alembic upgrade head     # Run database migrations
 uvicorn app.main:app --reload
@@ -405,7 +405,7 @@ const { team, members, inviteMember } = useTeam();
    cd backend
    python -m venv venv
    source venv/bin/activate  # On Windows use: venv\Scripts\activate
-   pip install -r requirements.txt
+   pip install -r ../requirements.txt  # Install from root requirements.txt
    alembic upgrade head
    uvicorn app.main:app --reload
    ```

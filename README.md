@@ -10,6 +10,8 @@ A full-stack Kanban board application built with React and FastAPI, featuring re
 
 Created by Mohamed Akaarir with the assistance of Cursor AI Composer and Anthropic's Claude-3.5-Sonnet model.
 
+![Kanban Board Preview](image.png)
+
 ## ⚡ Quick Start
 
 ```bash

@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0079bf;
+  --primary-hover: #026aa7;
+  --column-bg: #ebecf0;
+  --card-bg: #ffffff;
+}
+
+body {
+  @apply bg-[#0c3953] text-gray-700 min-h-screen;
+}
+
+/* Board Layout */
+.board-wrapper {
+  @apply flex-1 overflow-x-auto;
+  background-color: rgb(0, 121, 191);
+}
+
+.board-content {
+  @apply flex gap-4 p-4 h-full items-start;
+  min-width: fit-content;
+}
+
+.column {
+  @apply bg-gray-100 rounded-lg p-3 min-w-[272px] max-w-[272px] h-fit max-h-[calc(100vh-180px)] flex flex-col;
+}
+
+.task-card {
+  @apply bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-gray-200 relative;
+}
+
+.task-card:hover {
+  @apply bg-gray-50;
+}
+
+.task-card .quick-actions {
+  @apply absolute top-1 right-1 opacity-0 transition-opacity duration-200 flex gap-1;
+}
+
+.task-card:hover .quick-actions {
+  @apply opacity-100;
+}
+
+.task-card .quick-actions button {
+  @apply p-1 rounded hover:bg-gray-200 text-gray-600;
+}
+
+.task-card .priority-indicator {
+  @apply absolute left-0 top-0 w-1 h-full rounded-l-lg;
+}
+
+.priority-high {
+  @apply bg-red-500;
+}
+
+.priority-medium {
+  @apply bg-yellow-500;
+}
+
+.priority-low {
+  @apply bg-blue-500;
+}
+
+.column-header {
+  @apply text-sm font-semibold mb-2 px-1.5 flex items-center justify-between text-gray-800;
+}
+
+.column-content {
+  @apply space-y-2 overflow-y-auto flex-grow min-h-[1px] pb-0.5 px-0.5;
+}
+
+.column-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.column-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.column-content::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
+.task-label {
+  @apply px-2 py-0.5 rounded-full text-xs font-medium inline-flex items-center space-x-1;
+}
+
+.task-metadata {
+  @apply flex items-center gap-3 mt-2 text-xs text-gray-500;
+}
+
+.task-metadata-item {
+  @apply flex items-center gap-1;
+}
+
+.modal-container {
+  @apply fixed inset-0 z-50 overflow-y-auto;
+}
+
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 transition-opacity;
+}
+
+.modal-content {
+  @apply relative bg-white rounded-lg shadow-xl max-w-2xl mx-auto my-8 p-6;
+}
+
+.due-date {
+  @apply inline-flex items-center;
+}
+
+.due-date-soon {
+  @apply text-yellow-600;
+}
+
+.due-date-overdue {
+  @apply text-red-600;
+}
+
+.checklist-progress {
+  @apply h-1.5 bg-gray-200 rounded-full overflow-hidden mt-1;
+}
+
+.checklist-progress-bar {
+  @apply h-full bg-green-500 transition-all duration-300;
+}
+
+.card-cover-image {
+  @apply w-full h-32 object-cover rounded-t-lg -mt-3 -mx-3 mb-2;
+}
+
+.attachment-preview {
+  @apply mt-2 border rounded-lg p-2 flex items-start space-x-3 hover:bg-gray-50 transition-colors duration-200;
+}
+
+.comments-section {
+  @apply space-y-4 mt-4;
+}
+
+.comment {
+  @apply flex space-x-3 text-sm;
+}
+
+.comment-avatar {
+  @apply h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0;
+}
+
+.comment-content {
+  @apply flex-grow;
+}
+
+.loading-skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+@media (max-width: 640px) {
+  .column {
+    @apply min-w-[calc(100vw-2rem)] max-w-[calc(100vw-2rem)];
+  }
+}

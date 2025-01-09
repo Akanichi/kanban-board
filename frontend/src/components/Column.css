@@ -1,0 +1,147 @@
+/* Column styles */
+.column {
+    background: var(--column-bg, #ffffff);
+    border-radius: 12px;
+    min-width: 300px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.column:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.column-header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    border-radius: 12px 12px 0 0;
+    color: white;
+    flex-shrink: 0;
+}
+
+.column-header h2 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.column-content {
+    padding: 16px;
+    overflow-y: auto;
+    flex-grow: 1;
+    min-height: 100px;
+}
+
+.add-card-button {
+    width: calc(100% - 32px);
+    margin: 8px 16px 16px;
+    padding: 12px 16px;
+    background: var(--hover-bg);
+    border: 2px dashed var(--primary-color);
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.add-card-button:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Task Card styles */
+.task-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    padding: 12px;
+    margin-bottom: 12px;
+    cursor: grab;
+    transition: all 0.2s ease;
+    border: 1px solid var(--border-color);
+    user-select: none;
+}
+
+.task-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.task-card:active {
+    cursor: grabbing;
+}
+
+.task-card.is-dragging {
+    transform: rotate(2deg) scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+
+/* Scrollbar styling */
+.column-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.column-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.column-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.column-content::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Column count badge */
+.column-count {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Add list form */
+.add-list-form {
+    min-width: 300px;
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.add-list-form input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.add-list-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+} 

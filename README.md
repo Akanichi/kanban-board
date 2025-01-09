@@ -10,6 +10,38 @@ A full-stack Kanban board application built with React and FastAPI, featuring re
 
 Created by Mohamed Akaarir with the assistance of Cursor AI Composer and Anthropic's Claude-3.5-Sonnet model.
 
+## ⚡ Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/Akanichi/kanban-board.git
+cd kanban-board
+
+# Backend: Install and run
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env     # Create and configure your .env file
+alembic upgrade head     # Run database migrations
+uvicorn app.main:app --reload
+
+# Frontend: Install and run (in a new terminal)
+cd frontend
+npm install
+cp .env.example .env    # Create and configure your .env file
+npm start
+```
+
+Visit:
+- 🌐 Frontend: http://localhost:3000
+- 📚 API Docs: http://localhost:8000/docs
+- 💻 API: http://localhost:8000
+
+Default Admin Account:
+- Email: admin@example.com
+- Password: admin123
+
 ## 🚀 Table of Contents
 - [Features](#-features)
 - [Tech Stack](#️-tech-stack)

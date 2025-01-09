@@ -21,15 +21,13 @@ cd kanban-board
 cd backend
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r ../requirements.txt  # Install from root requirements.txt
-cp .env.example .env     # Create and configure your .env file
+pip install -r ../requirements.txt
 alembic upgrade head     # Run database migrations
 uvicorn app.main:app --reload
 
 # Frontend: Install and run (in a new terminal)
 cd ../frontend
 npm install
-cp .env.example .env    # Create and configure your .env file
 npm start
 ```
 
@@ -65,7 +63,6 @@ VITE_ENVIRONMENT=development
 - [Database Schema](#-database-schema)
 - [Frontend Documentation](#-frontend-documentation)
 - [Installation](#-installation)
-- [Environment Variables](#-environment-variables)
 - [Contributing](#-contributing)
 - [License](#-license)
 
@@ -411,7 +408,7 @@ const { team, members, inviteMember } = useTeam();
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/kanban-board.git
+   git clone https://github.com/Akanichi/kanban-board.git
    cd kanban-board
    ```
 
@@ -420,7 +417,7 @@ const { team, members, inviteMember } = useTeam();
    cd backend
    python -m venv venv
    source venv/bin/activate  # On Windows use: venv\Scripts\activate
-   pip install -r ../requirements.txt  # Install from root requirements.txt
+   pip install -r ../requirements.txt
    alembic upgrade head
    uvicorn app.main:app --reload
    ```
@@ -432,36 +429,7 @@ const { team, members, inviteMember } = useTeam();
    npm start
    ```
 
-## 🔐 Environment Variables
-
-### Backend (.env)
-```env
-# Application
-DEBUG=True
-ENVIRONMENT=development
-SECRET_KEY=your-secret-key-here
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=30
-
-# Database
-DATABASE_URL=sqlite:///./kanban.db
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=password
-POSTGRES_DB=kanban
-POSTGRES_HOST=localhost
-
-# CORS
-BACKEND_CORS_ORIGINS=["http://localhost:3000"]
-```
-
-### Frontend (.env)
-```env
-REACT_APP_API_URL=http://localhost:8000
-REACT_APP_WS_URL=ws://localhost:8000/ws
-REACT_APP_ENVIRONMENT=development
-```
-
-## 🤝 Contributing
+## 🔐 Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)

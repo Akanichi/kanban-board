@@ -7,7 +7,7 @@ interface NewTaskModalProps {
   status: TaskStatus;
 }
 
-export const NewTaskModal: React.FC<NewTaskModalProps> = ({ onClose, onSubmit, status }) => {
+export const NewTaskModal: React.FC<NewTaskModalProps> = ({ onClose, onSubmit }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
 
